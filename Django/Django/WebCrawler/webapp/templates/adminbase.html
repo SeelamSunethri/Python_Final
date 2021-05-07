@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Admin Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+
+<style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="">Data Crawlers to Collect Data</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/adminhome">Home</a></li>
+
+					<li><a href="/topicsearch">Search</a></li>
+					
+					<li><a href="/adminlogout">Logout</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Data Crawlers to Collect Data</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+                        {% block content %}
+                        {% endblock %}
+
+                        `					</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h4>Contact with us</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter"></i>Twitter</a>&nbsp;&nbsp;&nbsp;
+								<a href="#"><i class="icon fa-facebook"></i>Facebook</a>&nbsp;&nbsp;&nbsp;
+
+								<a href="#"><i class="icon fa-instagram"></i>Instagram</a>&nbsp;&nbsp;&nbsp;
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. 
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/browser.min.js' %}"></script>
+        <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

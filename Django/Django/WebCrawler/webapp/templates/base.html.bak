@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="">Data Crawlers to Collect Data</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/">Home</a></li>
+
+					<li><a href="alogin">Admin</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Data Crawlers to Collect Data</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+                        {% block content %}
+                        {% endblock %}
+
+                        `					</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h4>Contact with us</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter"></i>Twitter</a>&nbsp;&nbsp;&nbsp;
+								<a href="#"><i class="icon fa-facebook"></i>Facebook</a>&nbsp;&nbsp;&nbsp;
+
+								<a href="#"><i class="icon fa-instagram"></i>Instagram</a>&nbsp;&nbsp;&nbsp;
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. 
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/browser.min.js' %}"></script>
+        <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

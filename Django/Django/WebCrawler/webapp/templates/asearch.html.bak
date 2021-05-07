@@ -1,0 +1,17 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+
+<center>
+<h2>Search in Web</h2>
+<br>
+
+
+<table id="tab" width="70%">
+<form method="post" action="/searchurls">
+	{% csrf_token %}
+
+<tr><td><input type="text"  name="keys" required class="form-control">
+<tr><td><input type="submit" value="Search">
+</form>
+</table>
+{% endblock %}
